@@ -11,7 +11,7 @@ export const Page2Screen = () => {
       title: 'Overwriting Page 2',
       headerBackTitle: 'Back',
     });
-  }, []);
+  });
   return (
     <View style={styles.globalMargin}>
       <Text style={styles.title}>Page 2 Screen</Text>
