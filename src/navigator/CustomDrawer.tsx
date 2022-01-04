@@ -13,11 +13,13 @@ import {
   useWindowDimensions,
   View,
 } from 'react-native';
-import {styles} from '../themes/appTheme';
+import { styles, colors } from '../themes/appTheme';
 // import {NavigationHelpersContext} from '@react-navigation/core';
 // import { createStackNavigator } from '@react-navigation/stack';
 // import { startClock } from 'react-native-reanimated';
 import { TabNavigator } from './TabNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -66,12 +68,18 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
         <TouchableOpacity
           style={styles.menuButton}
           onPress={() => props.navigation.navigate('StackNavigator')}>
+          <Text>
+            <Icon name='home-outline' color={colors.tertiary} style={{ fontSize: 40}} />
+          </Text>
           <Text style={styles.menuText}>Home - Tabs</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.menuButton}
           onPress={() => props.navigation.navigate('SettingsScreen')}>
+           <Text>
+            <Icon name='settings-outline' color={colors.tertiary} style={{ fontSize: 40}} />
+          </Text>
           <Text style={styles.menuText}>Settings</Text>
         </TouchableOpacity>
       </View>

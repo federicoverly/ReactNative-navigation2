@@ -45,8 +45,13 @@ export const styles = StyleSheet.create({
   },
   menuButton: {
     marginVertical: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   menuText: {
     fontSize: 25,
+    color: colors.tertiary,
+    marginLeft: 10,
   }
 });

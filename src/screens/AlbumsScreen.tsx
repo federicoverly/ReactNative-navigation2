@@ -4,7 +4,7 @@ import { styles } from '../themes/appTheme'
 
 export const AlbumsScreen = () => {
   return (
-    <View >
+    <View style={ styles.globalMargin}>
       <Text>Albums Screen</Text>
     </View>
   )

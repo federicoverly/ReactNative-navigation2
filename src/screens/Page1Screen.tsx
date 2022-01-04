@@ -5,6 +5,7 @@ import {Button, Text, View} from 'react-native';
 import {TouchableOpacity} from 'react-native';
 import {styles} from '../themes/appTheme';
 
+
 // interface Props extends StackScreenProps<any, any> {}
 interface Props extends DrawerScreenProps<any, any> {}
 

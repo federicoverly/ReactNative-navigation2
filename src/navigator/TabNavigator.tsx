@@ -8,6 +8,8 @@ import { Tab2Screen } from '../screens/Tab2Screen';
 import { styles, colors } from '../themes/appTheme';
 import { Platform, Text } from 'react-native';
 import { TopTabNavigator } from './TopTabNavigator';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 export const TabNavigator = () => {
   return Platform.OS === 'ios' 
@@ -78,18 +80,18 @@ export const TabsIos = () => {
         let iconName: string = ''
         switch(route.name){
           case 'Tab1Screen':
-            iconName = 'T1'
+            iconName = 'flash-outline'
           break;
 
           case 'TopTabNavigator':
-            iconName = 'T2'
+            iconName = 'alert-circle-outline'
           break 
 
           case 'StackNavigator':
-            iconName = 'ST'
+            iconName = 'file-tray-stacked-outline'
           break
         }
-        return <Text style={{ color }}>{iconName}</Text>
+        return <Icon name={iconName} color={color} style={{ fontSize: 20}} />
       }
     }
     )}
