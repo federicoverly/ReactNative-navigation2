@@ -4,7 +4,7 @@ import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-import {StackNavigator} from './StackNavigator';
+// import {StackNavigator} from './StackNavigator';
 import {SettingsScreen} from '../screens/SettingsScreen';
 import {
   Image,
@@ -14,9 +14,10 @@ import {
   View,
 } from 'react-native';
 import {styles} from '../themes/appTheme';
-import {NavigationHelpersContext} from '@react-navigation/core';
-import { createStackNavigator } from '@react-navigation/stack';
-import { startClock } from 'react-native-reanimated';
+// import {NavigationHelpersContext} from '@react-navigation/core';
+// import { createStackNavigator } from '@react-navigation/stack';
+// import { startClock } from 'react-native-reanimated';
+import { TabNavigator } from './TabNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -40,7 +41,7 @@ export const CustomDrawer = () => {
         drawerType: width >= 768 ? 'permanent' : 'front ',
       }}
       drawerContent={props => <DrawerContent {...props} />}>
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      <Drawer.Screen name="Home - Tabs" component={TabNavigator} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
   );
@@ -65,7 +66,7 @@ const DrawerContent = (props: DrawerContentComponentProps) => {
         <TouchableOpacity
           style={styles.menuButton}
           onPress={() => props.navigation.navigate('StackNavigator')}>
-          <Text style={styles.menuText}>Home</Text>
+          <Text style={styles.menuText}>Home - Tabs</Text>
         </TouchableOpacity>
 
         <TouchableOpacity

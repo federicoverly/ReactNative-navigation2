@@ -12,6 +12,7 @@ target 'NavegationApp' do
     :hermes_enabled => false
   )
 
+
   target 'NavegationAppTests' do
     inherit! :complete
     # Pods for testing
