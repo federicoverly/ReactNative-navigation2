@@ -5,16 +5,26 @@ import {NavigationContainer} from '@react-navigation/native';
 // import {BasicDrawer} from './src/navigator/BasicDrawer';
 import { CustomDrawer } from './src/navigator/CustomDrawer';
 import { TabNavigator } from './src/navigator/TabNavigator';
+import { AuthProvider } from './src/context/AuthContext';
 
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <StackNavigator /> */}
-      {/* <BasicDrawer /> */}
-      <CustomDrawer />
-      {/* <TabNavigator /> */}
+      <AppState>
+        {/* <StackNavigator /> */}
+        {/* <BasicDrawer /> */}
+        <CustomDrawer />
+        {/* <TabNavigator /> */}
+      </AppState>
     </NavigationContainer>
   );
 };
 
+const AppState = ( { children } : any) => {
+  return( 
+    <AuthProvider>
+      {children }
+    </AuthProvider>
+  )
+}
 export default App;
